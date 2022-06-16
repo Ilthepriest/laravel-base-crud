@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
+@section('custom-css')
+<link rel="stylesheet" href="{{asset('css/prova.css')}}">
+@endsection
+
 @section('content')
-<h1>Crea nuovo comic</h1>
-    <form action="{{route('comics.store')}}" method="post">
+<h1 class="text-center">Crea nuovo comic</h1>
+<div class="container">
+<form action="{{route('comics.store')}}" method="post">
         @csrf
 
         <div class="form-group">
@@ -24,9 +29,14 @@
         </div>
 
         <label for="description">description</label>
-        <textarea name="description" name="description" id="description" cols="100" rows="10"></textarea>
-        <button type="submit">Add comic</button>
+        <div class="mb-3">
+          <label for="description" class="form-label"></label>
+          <textarea class="form-control" name="description" id="description" rows="6"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add comic</button>
     </form>
+</div>
+    
     
     
 @endsection

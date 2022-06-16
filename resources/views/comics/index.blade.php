@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<a href="{{route('comics.create')}}">Crea comic</a>
+<nav class="nav justify-content-center">
+  <a class="nav-link active" href="{{route('comics.create')}}">Crea comic</a>
+</nav>
 <div class="container">
 <table class="table">
     <thead>
@@ -18,10 +20,10 @@
         @foreach($comics as $comic)
         <tr>
             <td scope="row">{{$comic->id}}</td>
-            <td><img width="50" src="{{$comic->thumb}}" alt=""></td>
+            <td><img width="70" src="{{$comic->thumb}}" alt=""></td>
             <td>{{$comic->title}}</td>
             <td>{{$comic->description}}</td>
-            <td><img width="50" src="{{$comic->thumb}}" alt=""></td>
+            <td><img width="70" src="{{$comic->thumb}}" alt=""></td>
             <td><a href="{{route('comics.show', $comic->id)}}">View</a>- Edit - Delete</td>
         </tr>
     </tbody>
@@ -29,6 +31,6 @@
 </table>
 </div>
 
-<!-- {{dd($comics)}} -->
+
 
 @endsection

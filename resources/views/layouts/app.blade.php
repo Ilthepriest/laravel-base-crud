@@ -11,10 +11,15 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <!-- @yield('custom-css') -->
+    </head>
     <body>
         <header>
-            <a href="{{route('home')}}">Home</a>
-            <a href="{{route('comics.index')}}">Comics</a>
+            <nav class="nav justify-content-center">
+              <a class="nav-link active" href="{{route('home')}}">Home</a>
+              <a class="nav-link" href="{{route('comics.index')}}">Comics</a>
+            </nav>
+            
         </header>
         <main>
             @yield('content')
