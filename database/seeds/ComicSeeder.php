@@ -13,10 +13,13 @@ class ComicSeeder extends Seeder
     public function run()
     {
         $comics=[
-            'title' =>  'Topolino',
-            'description' =>  'Il fumetto di Topolino è uno dei più assurdi',
-            'thumb' =>  'https://static.wikia.nocookie.net/disney/images/d/d4/IMG_1868.PNG/revision/latest?cb=20161228161522&path-prefix=it',
-            'cover_image' =>  'https://www.lospaziobianco.it/wp-content/uploads/2021/09/Topolino-racconta-Dante-IMG-EVIDENZA.jpg',
+            [
+                'title' =>  'Topolino',
+                'description' =>  'Il fumetto di Topolino è uno dei più assurdi',
+                'thumb' =>  'https://static.wikia.nocookie.net/disney/images/d/d4/IMG_1868.PNG/revision/latest?cb=20161228161522&path-prefix=it',
+                'cover_image' =>  'https://www.lospaziobianco.it/wp-content/uploads/2021/09/Topolino-racconta-Dante-IMG-EVIDENZA.jpg',
+            ]
+            
         ];
 
         foreach($comics as $comic )

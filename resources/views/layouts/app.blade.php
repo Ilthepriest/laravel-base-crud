@@ -10,10 +10,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{assets('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <body>
         <header>
-
+            <a href="{{route('home')}}">Home</a>
+            <a href="{{route('comics.index')}}">Comics</a>
         </header>
         <main>
             @yield('content')
