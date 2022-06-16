@@ -18,9 +18,9 @@
         </div>
 
         <div class="form-group">
-          <label for="cover_image">Cover image</label>
-          <input type="text" name="cover_image" id="cover_image" class="form-control" placeholder="Inserisci iimagine" aria-describedby="cover_imageHelper">
-          <small id="cover_imageHelper" class="text-muted">Help text</small>
+          <label for="thumb">Cover image</label>
+          <input type="text" name="thumb" id="thumb" class="form-control" placeholder="Inserisci iimagine" aria-describedby="thumbHelper">
+          <small id="thumbHelper" class="text-muted">Help text</small>
         </div>
 
         <label for="description">description</label>

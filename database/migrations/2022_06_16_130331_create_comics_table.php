@@ -18,7 +18,7 @@ class CreateComicsTable extends Migration
             $table->string('title');
             $table->text('description')->nulllable();
             $table->string('thumb')->nulllable();
-            $table->string('cover_image')->nulllable();
+            
             $table->timestamps();
         });
     }

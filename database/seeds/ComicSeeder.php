@@ -12,7 +12,7 @@ class ComicSeeder extends Seeder
      */
     public function run()
     {
-        $comics=[
+       /*  $comics=[
             [
                 'title' =>  'Topolino',
                 'description' =>  'Il fumetto di Topolino è uno dei più assurdi',
@@ -20,15 +20,17 @@ class ComicSeeder extends Seeder
                 'cover_image' =>  'https://www.lospaziobianco.it/wp-content/uploads/2021/09/Topolino-racconta-Dante-IMG-EVIDENZA.jpg',
             ]
             
-        ];
+        ]; */
 
-        foreach($comics as $comic )
+        $comics = config('db.comics');
+
+        foreach($comics as $comic ){
             $new_comic = new Comic();
             $new_comic->title = $comic['title'];
             $new_comic->description = $comic['description'];
             $new_comic->thumb = $comic['thumb'];
-            $new_comic->cover_image = $comic['cover_image'];
             $new_comic->save();
+        }    
 
     }
 }
